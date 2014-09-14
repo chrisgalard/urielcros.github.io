@@ -1,278 +1,302 @@
 /*=====================================
  *  GLOBAL
  *===================================*/
+
+html, body {
+    height: 100%;
+}
 h2 {
     font-family: "Ubuntu", sans-serif;
-    font-size: 48px;
+    font-size: 32px;
     margin: 0;
 }
-
 p {
-    margin: 0;
     font-family: "Lato", sans-serif;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.5em;
     text-align: justify;
 }
-
 a {
     font-family: "Lato", sans-serif;
     text-decoration: none;
+    color: #fff;
 }
-
 .container {
-    width: 90%;
-    max-width: 1170px;
+    padding: 5%;
     margin: 0 auto;
 }
-
-.pull-left { float: left; }
-.pull-right { float: right; }
-
 .clearfix:after {
     content: '';
-    display: table;    
+    display: table;
     clear: both;
 }
-
 .hidden {
     position: absolute;
-    clip: rect(1px 1px 1px 1px); /* IE6 & 7 */
+    clip: rect(1px 1px 1px 1px);
+    /* IE6 & 7 */
     clip: rect(1px, 1px, 1px, 1px);
 }
-
 /*=====================================
  * HEADER
  *===================================*/
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     color: white;
-    top: 2em;
+    z-index: 2;
 }
-
-/*header:before {
+.logo {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background: url('../media/logo50x50.png') no-repeat;
+}
+.logo:before {
     content: "";
-    position: absolute;
     display: block;
+    width: 0;
+    height: 150%;
+}
+.navbar ul {
+    padding: 0;
+    text-align: center;
+}
+.navbar li {
+    display: inline-block;
+    padding: 0 5%;
+}
+.navbar a {
+    text-transform: uppercase;
+    font-size: 16px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+/*=====================================
+ * INTRO
+ *===================================*/
+.intro {
+    position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.25);
-}*/
-
-    .logo {
-        background-color: transparent;
-        border: 0;
-        overflow: hidden;
-        /* IE 6/7 fallback */
-        *text-indent: -9999px;
-        width: 50px;
-        height: 50px;
-        margin: 0;
-        background: url('../media/logo50x50.png') no-repeat;
-    }
-
-        .logo:before {
-            content: "";
-            display: block;
-            width: 0;
-            height: 150%;
-        }
-
-nav li {
-    display: inline-block;
-    padding: 0 1em;
+    background-color: #2073c6;
+    z-index: 1;
 }
-
-    nav a {
-        text-transform: uppercase;
-        font-size: 16px;
-        color: inherit;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-    }
-
-.intro {
-    height: 100vh;
-    background: url("../media/header-image.jpg") right bottom fixed;
-    background-size: cover;
+.intro .container {
+    display: table;
+    height: 100%;
 }
-
-    .intro .container { height: inherit; }
-
-        .iam {
-            position: relative;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-                    transform: translateY(-50%);
-            max-width: 650px;
-            margin: auto;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-            color: #fff;
-        }
-
-            .iam h2 {
-                margin: 0;
-                font-size: 22px;
-                font-family: "Lato", sans-serif;
-                font-weight: lighter;
-                line-height: 1.5em;
-                text-indent: 2em;
-            }
-
-                .iam p {
-                    font-family: "Ubuntu", sans-serif;
-                    font-size: 72px;
-                    margin: 0;
-                }
-
+.iam {
+    display: table-cell;
+    vertical-align: middle;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.me {
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+.me span:first-child {
+    display: block;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 48px;
+}
+.me span:last-child {
+    display: block;
+    text-indent: 1em;
+}
+.spacer {
+    height: 100%;
+}
 /*=====================================
  * ABOUT
  *===================================*/
-.ido {
-    padding: 8em 0;
-    background-color: #f4ecec;
+
+.about {
+    position: relative;
+    z-index: 2;
+    padding: 10em 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 -5px 5px rgba(0, 0, 0, .1);
+            box-shadow: 0 -5px 5px rgba(0, 0, 0, .1);
 }
-
-    .line {
-        max-width: 600px;
-        height: 16px;
-        margin: 0 auto;
-        background: url('../media/lines.png') center no-repeat;
-    }
-
-    .ido p {
-        max-width: 500px;
-        margin: 1em auto;
-        text-align: center;
-        text-indent: 0;
-        color: #7d7878;
-    }
-
+.about p {
+    padding: 1em 0;
+    border-top: 3px solid #efefef;
+    border-bottom: 3px solid #efefef;
+    text-indent: 1em;
+    color: #858585;
+}
 /*=====================================
  * RECENT-WORKS
  *===================================*/
-.recent-projects article { padding: 10em 0; }
-
-    .odd { background-color: #f4ecec; }
-
-        .odd h2 { text-align: right; }
-
-    .recent-projects h2 { color: #353535; }
-
-    .recent-projects p {
-        margin-top: 1em;
-        margin-right: 1em;
-        max-width: 650px;
-        text-indent: 2em;
-        color: #767171;
-    }
-
-    .recent-projects article:nth-child(2) p {
-        margin-right: 0;
-        margin-left: 1em;
-    }
-
-.roles { margin-top: 1em; }
-
-    .role {
-        display: inline-block;
-        width: 200px;
-        margin: .5em;
-        border: 2px solid #d5cdcd;
-        font-family: "Lato", sans-serif;
-        font-weight: lighter;
-        font-size: 22px;
-        line-height: 1.5em;
-        text-align: center;
-        color: #767171;
-    }
-
+.recent-projects {
+    position: relative;
+    z-index: 2;
+}
+.recent-projects article {
+    padding: 5em 0;
+}
+.odd {
+    background-color: #fafafa;
+}
+.even {
+    background-color: white;
+}
+.recent-projects {
+    color: #656565;
+}
+.recent-projects p {
+    text-indent: 1em;
+    margin: .3em 0 1em 0;
+}
+.recent-projects img {
+    width: 100%;
+}
+.roles {
+    margin-top: 1em;
+    list-style-type: none;
+    padding: 0;
+}
+.role {
+    margin: .5em auto;
+    border: 1px solid #aaa;
+    font-family: "Lato", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    line-height: 1.5em;
+    text-align: center;
+    color: #656565;
+}
 /*=====================================
  * PORTFOLIO
  *===================================*/
 .portfolio {
-    padding: 2em 0;
-    background-color: #f4ecec;
+    position: relative;
+    z-index: 2;
+    padding: 5em 0;
+    background-color: #fff;
 }
+.thumbnail {
+    position: relative;
+    width: 100%;
+}
+.thumbnail img {
+    width: 100%;
+}
+.hover-cover {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(54, 54, 54, 0.95);
+    -webkit-transition: all .3s;
+            transition: all .3s;
+}
+.thumbnail:active .hover-cover {
+    height: 100%;
+}
+.plus-icon {
+    position: absolute;
+    width: 18.5%;
+    height: 18.5%;
+    max-width: 50px;
+    max-height: 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.plus-icon img {
+    width: 100%;
+}
+.project-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
+.project-title p {
+    margin: 0;
+    font-size: 18px;
+    color: #3f3f3f;
+    text-align: center;
+}
+.thumbnail:hover .hover-cover {
+    display: block;
+}
+/*=====================================
+ * CONTACT
+ *===================================*/
 
-    .thumbnail {
-        float: left;
-        position: relative;
-        width: 23.1%;
-        max-width: 270px;     
-        max-height: 270px;
-        margin: 25px 1.26%;
-    }
+.contact {
+    position: relative;
+    z-index: 2;
+    padding: 8em 0;
+    background-color: white;
+}
+.contact label {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    color: #656565;
+}
+.contact input, .contact textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
-    .first { margin-left: 0; }
-    .last { margin-right: 0; }
-        
-        .thumbnail img { width: 100%; }
-
-        .hover-cover {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 0;
-            overflow: hidden;
-            background-color: rgba(54, 54, 54, 0.95);
-            -webkit-transition: all .3s;
-                    transition: all .3s;
-        }
-
-        .thumbnail:hover .hover-cover { height: 100%; }
-
-            .plus-icon {
-                position: absolute;
-                width: 18.5%;
-                height: 18.5%;
-                max-width: 50px;
-                max-height: 50px;
-                top: 0; right:0; bottom: 0; left: 0;
-                margin: auto;
-            }
-
-                .plus-icon img { width: 100%; }
-
-            .project-title {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                background-color: white;
-            }
-
-                .project-title p {
-                    margin: 0;
-                    font-size: 22px;
-                    line-height: 30px;
-                    color: #3f3f3f;
-                    text-align: center;
-                }
-
-        .thumbnail:hover .hover-cover { display: block; }
-
+    display: block;
+    width: 100%;
+    padding: 1em;
+    margin: .5em 0 1em 0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    color: #858585;
+}
+.contact input[type=submit] {
+    background-color: #2073c6;
+    border: none;
+    color: #fff;
+}
+.contact input[type=submit]:active {
+    position: relative;
+    top: 4px;
+}
+.contact input[type=text]:focus, .contact textarea:focus {
+    outline: 1px solid #13adff;
+}
 /*=====================================
  * FOOTER
  *===================================*/
-footer { background-color: #767171; }
 
-    footer .container {
-        position: relative;
-        padding: 10em 0;
-    }
-
-        .social { text-align: center; }
-
-        .social img {
-            width: 8.5%;
-            max-width: 90px;
-            margin: 0 1%;
-        }
-
+footer {
+    position: relative;
+    z-index: 2;
+    padding: 5em 0;
+    background-color: #454545;
+}
+.social {
+    padding: 0;
+    text-align: center;
+}
+.social li {
+    display: inline-block;
+    margin: .2em;
+}
 /*=====================================
  * GO TOP BUTTON
  *===================================*/
+
 .go-top {
     display: none;
     position: fixed;
@@ -285,4 +309,106 @@ footer { background-color: #767171; }
     color: #fff;
     text-align: center;
     line-height: 50px;
+    z-index: 3;
 }
+
+/*=====================================
+ * MEDIA QUERIES
+ *===================================*/
+ @media screen and (min-width: 600px) {
+    .container {
+        width: 90%;
+        max-width: 1170px;
+    }
+    /*=================================
+     * HEADER
+     *===============================*/
+    .logo {
+        float: left;
+    }
+    .navbar {
+        float: right;
+    }
+    /*=================================
+     * INTRO
+     *===============================*/
+     .me {
+        max-width: 650px;
+        margin: 0 auto;
+     }
+     .me span:first-child {
+        font-size: 72px;
+     }
+     /*=================================
+     * ABOUT
+     *===============================*/
+     .about p {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+        text-indent: 0;
+     }
+     /*=================================
+     * RECENT WORKS
+     *===============================*/
+     .recent-projects img {
+        float: left;
+        width: 48%;
+     }
+     .roles {
+        float: right;
+        width: 48%;
+     }
+     /*=================================
+     * CONTACT
+     *===============================*/
+     .info {
+        float: left;
+        width: 50%;
+     }
+     .message {
+        float: left;
+        width: 50%;
+     }
+     .contact input, .contact textarea {
+        width: 80%;
+        margin: .5em auto 3em auto;
+     }
+     .contact label {
+        display: block;
+        text-indent: 1.5em;
+     }
+ }
+
+ @media screen and (min-width: 800px) {
+    /*=================================
+     * RECENT WORKS
+     *===============================*/
+     .recent-projects h2 {
+        font-size: 36px;
+        margin-bottom: .3em;
+     }
+     .recent-projects p {
+        float: left;
+        width: 60%;
+     }
+     .recent-projects img {
+        float: right;
+        width: 37%;
+     }
+     .roles {
+        width: 100%;
+     }
+     .role {
+        display: inline-block;
+        width: 30%;
+        margin: 0 1% 0 0;
+     }
+ }
+
+  @media screen and (min-width: 1100px) {
+    .roles {
+        float: left;
+        width: 50%;
+    }
+  }
