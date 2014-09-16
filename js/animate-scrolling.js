@@ -15,7 +15,7 @@ $(document).ready(function() { 
                     event.preventDefault();     
                     $(scrollElem).animate({
                         scrollTop: targetOffset
-                    }, 1500, 'easeOutBounce', function() {      
+                    }, 1500, 'swing', function() {      
                         location.hash = target;     
                     });    
                 });   
