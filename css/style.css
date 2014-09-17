@@ -249,6 +249,7 @@ header {
     width: 100%;
     padding: 1em;
     margin: .5em 0 1em 0;
+    background-image: none;  /* Avoids firefox gradient background */
     border: 1px solid #aaa;
     border-radius: 5px;
     font-family: "Lato", sans-serif;
