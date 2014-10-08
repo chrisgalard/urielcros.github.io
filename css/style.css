@@ -113,7 +113,7 @@ header {
  *===================================*/
 
 .about {
-    padding: 10em 0;
+    padding: 15em 0;
     background-color: #fff;
     -webkit-box-shadow: 0 -5px 5px rgba(0, 0, 0, .1);
             box-shadow: 0 -5px 5px rgba(0, 0, 0, .1);
@@ -133,7 +133,7 @@ header {
     z-index: 2;
 }
 .recent-projects article {
-    padding: 5em 0;
+    padding: 10em 0;
 }
 .odd {
     background-color: #fafafa;
@@ -390,7 +390,7 @@ footer {
 
         float: left;
         width: 60%;
-        padding-right: 1em;
+        padding-right: 3em;
      }
      .recent-projects img {
         float: right;
